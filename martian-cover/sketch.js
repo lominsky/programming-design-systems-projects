@@ -59,6 +59,19 @@ dot.copy().move(720, 70);
 morse.move(80, 900).scale(.15).rotate(-20, 80, 900);
 
 
+//Space Ship!
+//Body
+r.rect(0, 0, 50, 150, ship).fill(255).stroke(false);
+//Cone
+r.triangle(0, 1, 50, 1, 25, -35, ship).fill(255).stroke(false);
+//Fins
+r.triangle(50, 100, 50, 140, 80, 160, ship).fill(255).stroke(255);
+r.triangle(0, 100, 0, 140, -30, 160, ship).fill(255).stroke(255);
+//Boosters
+r.triangle(12, 130, -3, 160, 27, 160, ship).fill(255).stroke(false);
+r.triangle(38, 130, 23, 160, 53, 160, ship).fill(255).stroke(false);
+ship.move(860, 200).rotate(50, 860, 200);
+
 
 
 //Draw
