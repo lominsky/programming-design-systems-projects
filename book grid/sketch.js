@@ -112,8 +112,8 @@ f.load(function(err) {
 	for(var i = 1; i <= g.vars.rows; i++) {
 		for(var j = 1; j <= g.vars.columns; j++) {
 			if(crossX == i && crossY == j) {
-				g.add(woman(g.vars.moduleWidth/2, (g.vars.moduleHeight-277*(r.height/2400))/2 - 32*(r.height/2400), r.height/2400, true), j, i);
-				g.add(cross(Math.round(g.vars.moduleWidth/2), Math.round(g.vars.moduleHeight/2), g.vars.moduleWidth*3/4, false), j, i);
+				g.add(woman((g.vars.moduleWidth/2), ((g.vars.moduleHeight-277*(r.height/2400))/2 - 32*(r.height/2400)), r.height/2400, false), j, i);
+				//g.add(cross(Math.round(g.vars.moduleWidth/2), Math.round(g.vars.moduleHeight/2), g.vars.moduleWidth*3/4, false), j, i);
 			} else if(!(j == textY && i == textX) && !(j == textY+1 && i == textX)) {
 				g.add(woman(g.vars.moduleWidth/2, (g.vars.moduleHeight-277*(r.height/2400))/2 - 32*(r.height/2400), r.height/2400, true), j, i);
 			} else if(j == textY && i == textX) {
