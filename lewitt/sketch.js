@@ -7,7 +7,7 @@ var r = new Rune({
 
 var columns = 15;
 //var width = Rune.random(1, r.width/(columns*5));
-var width = 4;
+var width = 10;
 
 var grid = r.grid({
   x: 0,
