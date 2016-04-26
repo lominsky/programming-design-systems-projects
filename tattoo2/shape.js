@@ -9,6 +9,7 @@ var numShapes = 4;
 var sides = 4;
 var radius = r.width/4;
 var rotation = 10;
+var stroke = 5;
 
 
 function draw() {
@@ -16,8 +17,9 @@ function draw() {
 
 	for(var i = 0; i < numShapes; i++)
 		drawShape(sides, radius, rotation * i);
+
+	text();
 	r.draw();
-	console.log(r);
 }
 
 function drawShape(sides, radius, rotation) {
@@ -29,7 +31,7 @@ function drawShape(sides, radius, rotation) {
 
 	path.closePath()
 		.fill(false)
-		.strokeWidth(5)
+		.strokeWidth(stroke)
 		.rotate(rotation, r.width / 2, r.height / 2);
 }
 
@@ -63,4 +65,29 @@ function removeShape() {
 	if(numShapes > 1)
 		numShapes--;
 	draw();
+}
+
+function increaseStroke() {
+	stroke++;
+	draw();
+}
+
+function decreaseStroke() {
+	if(stroke > 1)
+		stroke--;
+	draw();
+}
+
+function text() {
+	document.getElementById("numShapes").innerHTML = numShapes + " Shapes";
+	document.getElementById("numSides").innerHTML = sides + " Sides";
+	document.getElementById("numRot").innerHTML = "Rotation is " + rotation + "&deg";
+	document.getElementById("stroke").innerHTML = "Stroke is " + stroke;
+}
+
+function download() {
+	var e = document.createElement('script');
+	e.setAttribute('src', 'https://nytimes.github.io/svg-crowbar/svg-crowbar.js');
+	e.setAttribute('class', 'svg-crowbar');
+	document.body.appendChild(e);
 }

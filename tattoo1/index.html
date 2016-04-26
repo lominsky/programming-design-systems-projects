@@ -1,21 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
   <title>Triangles</title>
   <script type="text/javascript" src="../rune.js"></script>
-  <style type="text/css">
-    body {
-      background-color: #EAEAEA;
-    }
-    #canvas svg {
-      background-color: white;
-      box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.06),inset -1px -1px 1px 0 rgba(0, 0, 0, 0.02);
-      border: 1px solid #E2E2E2;
-      border-bottom-color: #CECECE;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body onload="draw()">
@@ -23,21 +12,21 @@
     <div id="canvas"></div>
   </div>
   <div class="inline" id="buttons">
-    <script type="text/javascript" src="sketch.js"></script>
+    <script type="text/javascript" src="triangles.js"></script>
     <div>
-      <button class="inline" onclick="addTriangle()">Add Triangle</button>
+      <button class="inline" onclick="addTriangle()">Triangles++</button>
       <p class="inline" id="numTris"></p>
-      <button class="inline" onclick="removeTriangle()">Remove Triangle</button>
+      <button class="inline" onclick="removeTriangle()">Triangle--</button>
     </div>
     <div>
-      <button class="inline" onclick="increaseWidth()">Grow</button>
+      <button class="inline" onclick="increaseWidth()">Size += 10</button>
       <p class="inline" id="baseWidth"></p>
-      <button class="inline" onclick="decreaseWidth()">Shrink</button>
+      <button class="inline" onclick="decreaseWidth()">Size -= 10</button>
     </div>
     <div>
-      <button class="inline" onclick="increaseStroke()">Increase Stroke</button>
+      <button class="inline" onclick="increaseStroke()">Stroke++</button>
       <p class="inline" id="strokeWidth"></p>
-      <button class="inline" onclick="decreaseStroke()">Drecrese Stroke</button>
+      <button class="inline" onclick="decreaseStroke()">Stroke--</button>
     </div>
     <div>
       <button id="download" onclick="download()">Download SVG</button>

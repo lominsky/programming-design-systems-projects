@@ -4,26 +4,37 @@
   <title>Shapes</title>
   <meta charset="utf-8">
   <script type="text/javascript" src="../rune.js"></script>
-  <style type="text/css">
-    body {
-      background-color: #EAEAEA;
-    }
-    #canvas svg {
-      background-color: white;
-      box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.06),inset -1px -1px 1px 0 rgba(0, 0, 0, 0.02);
-      border: 1px solid #E2E2E2;
-      border-bottom-color: #CECECE;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onload="draw()">
-  <div id="canvas"></div>
-  <script type="text/javascript" src="sketch.js"></script>
-  <button onclick="addShape()">Add Shape</button>
-  <button onclick="removeShape()">Remove Shape</button>
-  <button onclick="addSide()">Add Side</button>
-  <button onclick="removeSide()">Remove Side</button>
-  <button onclick="increaseRotation()">Increase Rotation</button>
-  <button onclick="decreaseRotation()">Decrease Rotation</button>
+  <div class="inline">
+    <div id="canvas"></div>
+  </div>
+  <div class="inline" id="buttons">
+    <script type="text/javascript" src="shape.js"></script>
+    <div>
+      <button class="inline" onclick="addShape()">Add Shape</button>
+      <p class="inline" id="numShapes"></p>
+      <button class="inline" onclick="removeShape()">Remove Shape</button>
+    <div>
+    <div>
+      <button class="inline" onclick="addSide()">Side++</button>
+      <p class="inline" id="numSides"></p>
+      <button class="inline" onclick="removeSide()">Side--</button>
+    </div>
+    <div>
+      <button class="inline" onclick="increaseRotation()">Rotation += 5</button>
+      <p class="inline" id="numRot"></p>
+      <button class="inline" onclick="decreaseRotation()">Rotation -= 5</button>
+    </div>
+    <div>
+      <button class="inline" onclick="increaseStroke()">Stroke++</button>
+      <p class="inline" id="stroke"></p>
+      <button class="inline" onclick="decreaseStroke()">Stroke--</button>
+    </div>
+    <div>
+      <button id="download" onclick="download()">Download SVG</button>
+    </div>
+  </div>
 </body>
 </html>
