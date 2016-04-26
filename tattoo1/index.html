@@ -1,5 +1,48 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+  body {
+    background-color: blue;
+  }
+
+  .inline {
+    float: left;
+  }
+
+  #buttons {
+    margin-left: 10px;
+  }
+
+  button {
+    margin: 5px;
+    width: 200px;    
+    background-color: #000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  #download {
+    width: 600px;
+  }
+
+  p {
+    width: 150px;
+    font-size: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 3px;
+    text-align: center;
+  }
+
+</style>
+
 <head>
   <meta charset="utf-8">
   <title>Triangles</title>
@@ -16,12 +59,31 @@
     }
   </style>
 </head>
+
 <body onload="draw()">
-  <div id="canvas"></div>
-  <script type="text/javascript" src="sketch.js"></script>
-  <button onclick="addTriangle()">Add Triangle</button>
-  <button onclick="removeTriangle()">Remove Triangle</button>
-  <button onclick="increaseWidth()">Grow</button>
-  <button onclick="decreaseWidth()">Shrink</button>
+  <div class="inline">
+    <div id="canvas"></div>
+  </div>
+  <div class="inline" id="buttons">
+    <script type="text/javascript" src="sketch.js"></script>
+    <div>
+      <button class="inline" onclick="addTriangle()">Add Triangle</button>
+      <p class="inline" id="numTris"></p>
+      <button class="inline" onclick="removeTriangle()">Remove Triangle</button>
+    </div>
+    <div>
+      <button class="inline" onclick="increaseWidth()">Grow</button>
+      <p class="inline" id="baseWidth"></p>
+      <button class="inline" onclick="decreaseWidth()">Shrink</button>
+    </div>
+    <div>
+      <button class="inline" onclick="increaseStroke()">Increase Stroke</button>
+      <p class="inline" id="strokeWidth"></p>
+      <button class="inline" onclick="decreaseStroke()">Drecrese Stroke</button>
+    </div>
+    <div>
+      <button id="download" onclick="download()">Download SVG</button>
+    </div>
+  </div>
 </body>
 </html>
